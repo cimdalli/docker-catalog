@@ -1,0 +1,29 @@
+.catalog:
+  name: "ELK"
+  version: "1.1"
+  description: "Elasticsearch + Logstash + Kibana"
+  questions:
+    - variable: "kopf_port"
+      label: "Kopf Port"
+      description: "Unique public port for kopf"
+      type: "int"
+      default: 81
+      required: true
+    - variable: "kibana_port"
+      label: "Kibana Port"
+      description: "Unique public port for kibana"
+      type: "int"
+      default: 80
+      required: true
+    - variable: "filebeat_port"
+      label: "Filebeat Port"
+      description: "Unique public port for filebeat"
+      type: "int"
+      default: 5044
+      required: true
+    - variable: "es_port"
+      label: "Elasticsearch Port"
+      description: "Unique public port for elasticsearch"
+      type: "int"
+      default: 9200
+      required: true

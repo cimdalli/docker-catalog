@@ -1,0 +1,5 @@
+name: ELK 1.1
+description: |
+  Elasticsearch + Logstash (filebeat) + Kibana
+version: 1.1
+category: ELK with filebeat

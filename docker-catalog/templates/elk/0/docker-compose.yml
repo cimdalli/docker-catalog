@@ -1,0 +1,29 @@
+kopf:
+  ports:
+  - ${kopf_port}:80/tcp
+  environment:
+    KOPF_ES_SERVERS: es:9200
+    KOPF_SERVER_NAME: elasticsearch
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: lmenezes/elasticsearch-kopf
+  links:
+  - log:es
+  stdin_open: true
+log:
+  ports:
+  - ${kibana_port}:5601/tcp
+  - ${filebeat_port}:5044/tcp
+  - ${es_port}:9200/tcp
+  log_driver: ''
+  labels:
+    io.rancher.container.pull_image: always
+  tty: true
+  log_opt: {}
+  image: cimdalli/elk-docker
+  volumes:
+  - /var/lib/elk:/var/lib/elasticsearch
+  stdin_open: true
