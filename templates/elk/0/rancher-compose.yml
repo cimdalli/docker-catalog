@@ -1,6 +1,7 @@
 .catalog:
   name: "ELK"
   version: "5"
+  upgrade_from: "1.1"
   description: "Elasticsearch + Logstash + Kibana"
   questions:
     - variable: "kopf_port"
