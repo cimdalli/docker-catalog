@@ -1,5 +1,5 @@
-name: ELK 1.1
+name: ELK 5
 description: |
   Elasticsearch + Logstash (filebeat) + Kibana
-version: 1.1
+version: 5
 category: ELK with filebeat
